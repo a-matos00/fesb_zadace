@@ -8,4 +8,6 @@ int main() {
 	zn_2 = broj % 10;
 	printf("Prva znamenka je %d\n", zn_1);
 	printf("Druga znamenka je %d\n", zn_2);
+	
+	return 0;
 }
