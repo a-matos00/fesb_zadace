@@ -1,0 +1,32 @@
+#define MAX 20
+#include <stdio.h>
+int main(){
+	int i, n;
+	int matrica[MAX] = { 0 };
+	printf("unesi broj elemenata matrice\n");
+	scanf("%d", &n);
+	
+	for (i = 0; i < n; i++) {
+		printf("Unesi %d. element\n", i+1);
+		scanf("%d", &matrica[i]);
+	}
+	printf("Izvorna matrica glasi:\n");
+	for (i = 0; i < n; i++) {
+		printf("%d", matrica[i]);
+		
+	}
+	printf("\n");
+
+	for (i = 0; i < n; i++) {
+		matrica[n + i] = matrica[i];
+	}
+	printf("Nova matrica je:\n");
+	//printf("%d", matrica[]);
+	for (i =1; i < n+1; i++) {
+		matrica[i - 1] = matrica[2 * n - i];
+	}
+	for (i = 0; i < n; i++) {
+		printf("%d", matrica[i]);
+
+	}
+}
