@@ -1,0 +1,36 @@
+#include <stdio.h>
+#define N 3
+int main() {
+	int i,j,pom;
+	int st_1, st_2;
+	int matrica[N][N] = { {1,2,3},{4,5,6},{7,8,9} };
+	pom = 0;
+	//koje stupce zelis zamjenit
+	printf("unesi prvi stupac koje zelis zamjeniti \n");
+	scanf("%d",&st_1);
+	printf("unesi drugi stupac koje zelis zamjeniti \n");
+	scanf("%d", &st_2);
+
+	//ispis matrice
+	for (i = 0; i < N; i++) {
+		for (j = 0; j < N; j++) {
+			printf("%d,", matrica[i][j]);
+		}
+		printf("\n");
+	}
+
+	//zamjena
+	for (i = 0; i < N; i++) {
+		pom = matrica[i][st_1 - 1];
+		matrica[i][st_1 - 1] = matrica[i][st_2 - 1];
+		matrica[i][st_2-1] = pom;
+	}
+	printf("\n");
+
+	for (i = 0; i < N; i++) {
+		for (j = 0; j < N; j++) {
+			printf("%d,", matrica[i][j]);
+		}
+		printf("\n");
+	}
+}
