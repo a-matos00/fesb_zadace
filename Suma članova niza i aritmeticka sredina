@@ -1,0 +1,35 @@
+#include <stdio.h>
+#define N 20
+int main() {
+	int i;
+	int broj_clanova;
+	int sum;
+	int aritm;
+	int niz[N];
+	sum = 0;
+
+	//unos broja članova
+	printf("koliko clanova ima niz?\n");
+	scanf("%d", &broj_clanova);
+
+	//unos članova u niz
+	printf("unes brojeve u matricu\n");
+	for (i = 0; i < broj_clanova; i++) {
+		scanf("%d", &niz[i]);
+		
+	}
+
+	//ispis matrice
+	printf("vas niz je:\n");
+	for (i = 0; i < broj_clanova; i++) {
+		printf("%d,", niz[i]);
+	}
+	printf("\n");
+	//suma članova i aritmeticka sredina niza
+	for (i = 0; i < broj_clanova; i++) {
+		sum+=niz[i];
+	}
+	aritm = sum / broj_clanova;
+	printf("suma niza je %d a aritmeticka sredina %d", sum,aritm);
+}
+
