@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main() {
+	int min;
+	int max;
+	int min_pol;
+	int max_pol;
+	int i, j;
+	int matrica[5] = { 1,3,5,2,4 };
+
+	//ispis matrice
+	printf("Originalna matrica: \n");
+	for (i = 0; i < 5; i++) {
+		printf("%d,", matrica[i]);
+	}
+	printf("\n");
+	//traženje najveće i najmanje vrijednosti
+	min = matrica[0];
+	max = matrica[0];
+	min_pol = 1;
+	max_pol = 1;
+	for (i = 0; i < 5; i++) {
+		if (matrica[i] < min) {
+			min = matrica[i];
+			min_pol = i + 1;
+		}
+		if (matrica[i] > max) {
+			max = matrica[i];
+			max_pol = i + 1;
+		}
+	}
+	printf("Najveca vrijednost je %d na polozaju %d, a najmanja %d na polozaju %d",max,max_pol,min,min_pol);
+
+}
+
