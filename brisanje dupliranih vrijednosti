@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+	int i,j,k;
+	int n = 8;
+	
+	int niz[] = { 1, 2, 5, 1, 7, 2, 4, 2 };
+	
+	//ispis
+	for (i = 0; i <n; i++) {
+		printf("%d,", niz[i]);
+	}
+	printf("\n");
+
+	for (i = 0; i < n; i++)
+		for (j = i + 1; j < n; j++)
+			if (niz[i] == niz[j]) {
+				for (k = j; k < n - 1; k++)
+					niz[k] = niz[k + 1];
+				n--;
+				j--;
+			}
+
+
+	
+
+	
+	for (i = 0; i < n; i++) {
+		printf("%d,", niz[i]);
+	}
+
+	printf("\n");
+
+
+}
+
