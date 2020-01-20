@@ -1,0 +1,35 @@
+#include <stdio.h>
+#define N 10
+int main() {
+	int i, pol,val,pom;
+	int niz[N] = { 1,2,3,4,5,};
+	int n = 6;
+
+
+	//Upis
+	printf("unesi položaj!\n");
+	scanf("%d",&pol);
+	printf("unesi broj\n");
+	scanf("%d", &val);
+
+	//ispis
+	for (i = 0; i < N; i++) {
+		printf("%d,", niz[i]);
+	}
+	printf("\n");
+
+	//umetanje
+	for (i = N - 1; i >= pol - 1; i--) 
+		niz[i+1] = niz[i];
+	    niz[pol-1] = val;
+
+	//ispis
+	for (i = 0; i < N; i++) {
+		printf("%d,", niz[i]);
+	}
+
+	printf("\n");
+
+
+}
+
